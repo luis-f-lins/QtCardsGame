@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>card sound.mp3</file>
+    </qresource>
+</RCC>
