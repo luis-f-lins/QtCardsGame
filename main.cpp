@@ -21,6 +21,10 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
+
+
+
+
     //initialize random seed
     srand(time(NULL));
 
@@ -47,10 +51,24 @@ int main(int argc, char *argv[])
     MyPack *mypack_card1 = new MyPack();
     mypack_card1->card->setPos(50,60);
     scene->addItem(mypack_card1 ->card);
+    //king, queen, and knave control
+    if (mypack_card1 ->card_number == 11 || mypack_card1 ->card_number == 12 || mypack_card1 ->card_number == 13 ){
+        scene->player_sum +=10;
+    }
+    else{
+    scene->player_sum += mypack_card1->card_number;
+    }
 
     MyPack *mypack_card2 = new MyPack();
     mypack_card2->card->setPos(200,60);
     scene->addItem(mypack_card2->card);
+    //king, queen, and knave control
+    if (mypack_card2 ->card_number == 11 || mypack_card2 ->card_number == 12 || mypack_card2 ->card_number == 13 ){
+        scene->player_sum +=10;
+    }
+    else{
+    scene->player_sum += mypack_card2->card_number;
+    }
 
 
 
@@ -65,7 +83,7 @@ int main(int argc, char *argv[])
     //connect MyButton draw signal clicked to MyScene scene slot draw()
     QObject::connect(draw,SIGNAL(clicked()),scene,SLOT(draw()));
     //connect MyButton draw signal clicked to MyScene scene slot play_sound()
-    QObject::connect(draw,SIGNAL(clicked()),scene,SLOT(play_sound()));
+    QObject::connect(draw,SIGNAL(clicked()),scene,SLOT(play_card_sound()));
 
 
     //create buttom "show croupier"
@@ -94,6 +112,9 @@ int main(int argc, char *argv[])
     scene->addWidget(new_round);
 
     QObject::connect(new_round,SIGNAL(clicked()),scene,SLOT(clean_scene()));
+
+
+
 
 
 

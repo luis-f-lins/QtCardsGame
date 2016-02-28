@@ -7,7 +7,6 @@
 #include<QtAlgorithms>
 
 class MyPack{
-Q_OBJECT
 public:
 
 // random generation function for the card suit
@@ -15,16 +14,15 @@ int  rand_suit();
 int suit = rand_suit();
 // random generation function for the card number
 int  rand_card();
+
 int card_number = rand_card();
-QString str = QString(":/images/") + QString::number(rand_suit()) + QString(".") + QString::number(rand_card()) + QString(".png");
+QString str = QString(":/images/") + QString::number(rand_suit()) + QString(".") + QString::number(card_number) + QString(".png");
+
 
 //create a card according to the randon numbers rand_suit and rand_card
 MyCard * card = new MyCard(QPixmap(str));
 
-public slots:
 
-//teste
-void deletar();
 
 
 

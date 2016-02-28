@@ -12,10 +12,16 @@ public:
 
     //create sound object
     QMediaPlayer * card_sound = new QMediaPlayer();
+    QMediaPlayer * win_sound = new QMediaPlayer();
+    QMediaPlayer * lose_sound = new QMediaPlayer();
 
     int desloc;
+
     bool first_time = true;
-    bool click = true;
+
+    int player_sum = 0;
+
+    int croupier_sum = 0;
 
 
 
@@ -23,17 +29,13 @@ public slots:
     //draw a new card
     void draw();
     // play sound when a new card is drawn
-    void play_sound();
-    //set the hand of the croupier
+    void play_card_sound();
+    // set the cards of the croupier
     void set_croupier_cards();
     //delete the scene
     void end_game();
-    //teste
+    //star new round
     void clean_scene();
-
-
-
-
 
 
 };

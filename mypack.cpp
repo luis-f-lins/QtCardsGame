@@ -12,10 +12,6 @@ int MyPack::rand_card()
     return random;
 }
 
-//temporario
-void MyPack::deletar()
-{
-    card->hide();
-}
+
 
 
