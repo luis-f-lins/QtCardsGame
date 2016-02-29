@@ -1,6 +1,6 @@
 #include <myscene.h>
 #include <QApplication>
-#include <QgraphicsView>
+#include <QGraphicsView>
 #include <mybutton.h>
 #include <mycard.h>
 #include <QMainWindow>

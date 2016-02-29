@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/sounds">
-        <file>card.sound.mp3</file>
-        <file>lose.sound.mp3</file>
-        <file>win.sound.mp3</file>
+        <file alias="/home/sbvb/Dropbox/github/QtCardsGame/card.sound.mp3">card.sound.mp3</file>
+        <file alias="/home/sbvb/Dropbox/github/QtCardsGame/lose.sound.mp3">lose.sound.mp3</file>
+        <file alias="/home/sbvb/Dropbox/github/QtCardsGame/win.sound.mp3">win.sound.mp3</file>
     </qresource>
 </RCC>
