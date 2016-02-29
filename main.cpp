@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 
     //connect MyButton draw signal clicked to MyScene scene slot draw()
     QObject::connect(draw,SIGNAL(clicked()),scene,SLOT(draw()));
-    //connect MyButton draw signal clicked to MyScene scene slot play_sound()
+    //connect MyButton draw signal clicked to MyScene scene slot play_()
     QObject::connect(draw,SIGNAL(clicked()),scene,SLOT(play_card_sound()));
 
 

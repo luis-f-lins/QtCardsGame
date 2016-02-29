@@ -6,7 +6,7 @@
 void MyScene::play_card_sound()
 {
 
-    card_sound->setMedia(QUrl("qrc:/sounds/card sound.mp3"));
+    card_sound->setMedia(QUrl("qrc:/sounds/card.sound.mp3"));
     card_sound->play();
 
 }
@@ -75,9 +75,9 @@ void MyScene::set_croupier_cards()
 
 
      //set win sound
-     win_sound->setMedia(QUrl("qrc:/sounds/win sound.mp3"));
+     win_sound->setMedia(QUrl("qrc:/sounds/win.sound.mp3"));
      //set lose sound
-     lose_sound->setMedia(QUrl("qrc:/sounds/lose sound.mp3"));
+     lose_sound->setMedia(QUrl("qrc:/sounds/lose.sound.mp3"));
      //conditions for winnig or losing
      if ((player_sum <= 21 && croupier_sum <= 21 && player_sum > croupier_sum) || (player_sum <= 21 && croupier_sum > 21)){
          win_sound->play();
